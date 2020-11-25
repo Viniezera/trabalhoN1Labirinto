@@ -1,19 +1,18 @@
-#pragma once
 #include <iostream>
-#ifndef mapaPossivel_H
-#define mapaPossivel_H
-#include <stdio.h>
+#ifndef mapinha_h
+#define mapinha_h
+#include <cstdlib>
+#include <ctime>
 #include <stdlib.h>
-#include "structrato.h"
-int main() {
+#include "ratao.h"
 
-		const char PAREDE = 'p';
-		const char espaco = '.';
-		const char queijo = 'q';
-		const char entrada = 'e';
-		const char ida = '+';
-		const char volta = '/';
-	}
+	const char PAREDE = 'p';
+	const char espaco = '.';
+	const char queijo = 'q';
+	const char entrada = 'e';
+	const char ida = '+';
+	const char volta = '/';
+};
 #endif
 
 	struct mapaPossivel {
@@ -39,7 +38,7 @@ int main() {
 		cout << "******" << endl;
 	}
 
-	bool procurarQueijo(mapa &Omapa, int posX, int posY, bool& queijo) {
+	bool procurarQueijo(mapa &oMapa, int posX, int posY, bool& queijo) {
 
 		if (posX < 0 || posY < 0 || posX >= LARGURA || posY >= ALTURA) {
 			return false;
@@ -74,4 +73,5 @@ int main() {
 			mostrarMapa
 		}
 		return false;
+	}
 	}
